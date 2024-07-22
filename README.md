@@ -52,7 +52,9 @@ $$a_t = D = - d v_t$$
 From $a_t = v_{t+1} - v_t$ we get :  
 
 $$- d v_t = v_{t+1} - v_t$$  
+
 $$v_{t+1} = v_t - d v_t$$  
+
 $$v_{t+1} = (1-d) v_t$$  
 
 By a change of variable we get :  
@@ -66,6 +68,7 @@ $$v_t = (1-d) (1-d) v_{t-2}$$
 Or even that :  
 
 $$v_t = v_{t-n} \prod_{k=0}^n{(1-d)}$$  
+
 $$v_t = v_{t-n} (1-d)^n$$  
 
 Let's chose $n=t$ to go back to $v_0$ :  
@@ -83,6 +86,7 @@ $$a_t = W + D = -g - d v_t$$
 We then get :  
 
 $$v_{t+1} = -g - d v_t + v_t$$  
+
 $$v_{t+1} = (1-d) v_t - g$$  
 
 With the same change of variable as earlier we get :  
@@ -92,5 +96,7 @@ $$v_t = (1-d) v_{t-1} - g$$
 We also have :  
 
 $$v_t = (1-d) ((1-d) v_{t-2} - g) - g$$  
+
 $$v_t = (1-d) ((1-d) (... ((1-d) v_0 - g) ...) - g) - g$$  
+
 $$v_t = (1-d)^t v_0 - g \frac{1-(1-d)^t}{d}$$  
