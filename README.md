@@ -17,7 +17,10 @@ We will first need to understand what velocity and acceleration are. Basically v
 
 In Minecraft physics engine, the standard timestamp between updates is 1 tick, so $\Delta t = 1$, we can simplify expression like this :
 
+For velocity :  
 $$ v_t = \frac{ x_{t+1} - x_t }{1} = x_{t+1} - x_t $$  
+
+For acceleration :  
 $$ a_t = \frac{ v_{t+1} - v_t }{1} = v_{t+1} - v_t $$
 
 # Forces
