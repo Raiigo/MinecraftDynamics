@@ -10,10 +10,10 @@ Because the time is discrete we will avoid Newtonian mechanic equations which us
 # Acceleration and velocity
 We will first need to understand what velocity and acceleration are. Basically velocity is the rate of change of position and acceleration is the rate of change of velocity, which can be translated into equations that you may have already encountered, let's split it into the equation used with discrete and continuous time :
 
-|            |Continuous |Discrete|
-|------------|-----------|--------|
-|Velocity    |$v(t) = \frac{d x(t)}{d t}$|$v_t = x_(t+1) - x_t$        |
-|Acceleration|$a(t) = \frac{d v(t)}{d t}$|        |
+|            |Continuous                 |Discrete             |
+|------------|---------------------------|---------------------|
+|Velocity    |$v(t) = \frac{d x(t)}{d t}$|$v_t = x_{t+1} - x_t$|
+|Acceleration|$a(t) = \frac{d v(t)}{d t}$|$a_t = v_{t+1} - v_t$|
 
 # Forces
 Let's talk about forces and illustrate how they work with Newtonian mechanic equation (*even if they won't work to predict game physic, they are useful to understand what forces are*). The Newton's second law of motion tells us that forces applied on an object are proportional to acceleration of this object (the proportionality constant being mass) :  
