@@ -65,4 +65,4 @@ $$v_t = (1-d) (1-d) v_{t-2}$$
 
 Or even that :  
 
-$$v_t = v_{t-n} \prod_k=0^n{(1-d)}$$  
+$$v_t = v_{t-n} \prod_{k=0}^n{(1-d)}$$  
