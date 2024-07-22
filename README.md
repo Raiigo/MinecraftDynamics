@@ -40,11 +40,29 @@ We will use the cartesian coordinate system to describe projectiles dynamic (x, 
 
 ## Formula for gravity and drag
 
-Gravity is the easiest of the two forces, it is denoted as the "acceleration" on the Minecraft wiki, we will call it $W$ (for weight), it is a homogeneous field, which means that gravity is the same everywhere in a Minecraft world, let's put it equal to "g", the gravitational acceleration : $W = g$.  
-Drag (which can be interpreted as the air resistance, even if it doesn't act exactly the same), is not constant, it is proportional to the velocity of the object, let's call it $D$ and put $D = d v_t$ where $d$ is what the wiki call the "drag" (**Warning** we will be using d for both the vertical and horizontal motion, but it is not always the same value, beware to change it to the right value for your entity).  
+Gravity is the easiest of the two forces, it is denoted as the "acceleration" on the Minecraft wiki, we will call it $W$ (for weight), it is a homogeneous field, which means that gravity is the same everywhere in a Minecraft world, let's put it equal to "-g", the gravitational acceleration : $W = -g$.  
+Drag (which can be interpreted as the air resistance, even if it doesn't act exactly the same), is not constant, it is proportional to the velocity of the object, let's call it $D$ and put $D = - d v_t$ where $d$ is what the wiki call the "drag" (**Warning** we will be using d for both the vertical and horizontal motion, but it is not always the same value, beware to change it to the right value for your entity), we use a negative sign because the drag is opposed to th motion.  
 
 ## Acceleration on the x axis
 
 As we said earlier, there is only one force here : the drag, so we have the following equality :  
 
-$$a_t = D = d v_t$$
+$$a_t = D = - d v_t$$  
+
+From $a_t = v_{t+1} - v_t$ we get :  
+
+$$- d v_t = v_{t+1} - v_t$$  
+$$v_{t+1} = v_t - d v_t$$  
+$$v_{t+1} = (1-d) v_t$$  
+
+By a change of variable we get :  
+
+$$v_t = (1-d) v_{t-1}$$  
+
+Now let's try to express $v_t$ with $v_0$ (the initial velocity), because recurrence relation like this one are pretty hard to get around with. We can notice that :  
+
+$$v_t = (1-d) (1-d) v_{t-2}$$  
+
+Or even that :  
+
+$$v_t = v_{t-n} \prod_k=0^n{(1-d)}$$  
