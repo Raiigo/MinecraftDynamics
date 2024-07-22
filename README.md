@@ -66,3 +66,8 @@ $$v_t = (1-d) (1-d) v_{t-2}$$
 Or even that :  
 
 $$v_t = v_{t-n} \prod_{k=0}^n{(1-d)}$$  
+$$v_t = v_{t-n} (1-d)^n$$  
+
+Let's chose $n=t$ to go back to $v_0$ :  
+
+$$v_t = (1-d)^t v_0$$  
