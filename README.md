@@ -19,11 +19,32 @@ In Minecraft physics engine, the standard timestamp between updates is 1 tick, s
 
 $$v_t = \frac{ x_{t+1} - x_t }{1} = x_{t+1} - x_t$$  
 
-$$a_t = \frac{ v_{t+1} - v_t }{1} = v_{t+1} - v_t$$
+$$a_t = \frac{ v_{t+1} - v_t }{1} = v_{t+1} - v_t$$  
+
+These are the two expression we will be using for our equations later on.
 
 # Forces
 Let's talk about forces and illustrate how they work with Newtonian mechanic equation (*even if they won't work to predict game physic, they are useful to understand what forces are*). The Newton's second law of motion tells us that forces applied on an object are proportional to acceleration of this object (the proportionality constant being mass) :  
 
 ```math
-\sum{ \vec{F} } = m \vec{a}
+\sum{F} = m a
 ```
+
+There is no such thing as mass in Minecraft, so we will considere that acceleration are equal to the sum of all the forces (there is obviously a unit error here, but we can consider forces to be the same as acceleration because mass isn't a thing here).
+
+# Application
+Let's apply that to the trajectory of projectiles. First of all we will need to find all the forces applied to a projectile.
+
+We can find these information on the Minecraft wiki ([here](https://minecraft.wiki/w/Entity#Motion_of_entities)), there is only two forces here, one strictly vertical: gravity, and the second one is the drag, being applied on all direction.
+We will use the cartesian coordinate system to describe projectiles dynamic (x, y, z, y being the vertical axis on which gravity act). x and z axis being equivalent, we will only describe motion on x axis.
+
+## Formula for gravity and drag
+
+Gravity is the easiest of the two forces, it is denoted as the "acceleration" on the Minecraft wiki, we will call it $W$ (for weight), it is a homogeneous field, which means that gravity is the same everywhere in a Minecraft world, let's put it equal to "g", the gravitational acceleration : $W = g$.  
+Drag (which can be interpreted as the air resistance, even if it doesn't act exactly the same), is not constant, it is proportional to the velocity of the object, let's call it $D$ and put $D = d v_t$ where $d$ is what the wiki call the "drag" (**Warning** we will be using d for both the vertical and horizontal motion, but it is not always the same value, beware to change it to the right value for your entity).  
+
+## Acceleration on the x axis
+
+As we said earlier, there is only one force here : the drag, so we have the following equality :  
+
+$$a_t = D = d v_t$$
