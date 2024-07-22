@@ -43,7 +43,7 @@ We will use the cartesian coordinate system to describe projectiles dynamic (x, 
 Gravity is the easiest of the two forces, it is denoted as the "acceleration" on the Minecraft wiki, we will call it $W$ (for weight), it is a homogeneous field, which means that gravity is the same everywhere in a Minecraft world, let's put it equal to "-g", the gravitational acceleration : $W = -g$.  
 Drag (which can be interpreted as the air resistance, even if it doesn't act exactly the same), is not constant, it is proportional to the velocity of the object, let's call it $D$ and put $D = - d v_t$ where $d$ is what the wiki call the "drag" (**Warning** we will be using d for both the vertical and horizontal motion, but it is not always the same value, beware to change it to the right value for your entity), we use a negative sign because the drag is opposed to th motion.  
 
-## Acceleration on the x axis
+## Acceleration and velocity on the x axis
 
 As we said earlier, there is only one force here : the drag, so we have the following equality :  
 
@@ -71,3 +71,26 @@ $$v_t = v_{t-n} (1-d)^n$$
 Let's chose $n=t$ to go back to $v_0$ :  
 
 $$v_t = (1-d)^t v_0$$  
+
+That's the final expression for velocity on x (or z) axis.
+
+## Acceleration and velocity on the y axis
+
+This time we have two forces, gravity and drag, so we have this expression for acceleration :  
+
+$$a_t = W + D = -g - d v_t$$  
+
+We then get :  
+
+$$v_{t+1} = -g - d v_t + v_t$$  
+$$v_{t+1} = (1-d) v_t - g$$  
+
+With the same change of variable as earlier we get :  
+
+$$v_t = (1-d) v_{t-1} - g$$  
+
+We also have :  
+
+$$v_t = (1-d) ((1-d) v_{t-2} - g) - g$$  
+$$v_t = (1-d) ((1-d) (... ((1-d) v_0 - g) ...) - g) - g$$  
+$$v_t = (1-d)^t v_0 - g \frac{1-(1-d)^t}{d}$$  
