@@ -12,7 +12,7 @@ We will first need to understand what velocity and acceleration are. Basically v
 
 |            |Continuous |Discrete|
 |------------|-----------|--------|
-|Velocity    |$v(t) = \frac{d x(t)},{d t}$|        |
+|Velocity    |$v(t) = \frac{d x(t)}{d t}$|        |
 |Acceleration|           |        |
 
 # Forces
