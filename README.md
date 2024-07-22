@@ -141,13 +141,13 @@ $$y_t = y_0 + \sum_{k=0}^{t-1}{v_k}$$
 
 $$y_t = y_0 + \sum_{k=0}^{t-1}{(1-d)^k v_0 - g \frac{1-(1-d)^k}{d}}$$  
 
-$$y_t = y_0 + \sum_{k=0}^{t-1}{(v_0 + g/d)(1-d)^k - g/d}$$  
+$$y_t = y_0 + \sum_{k=0}^{t-1}{(v_0 + \frac{g}{d})(1-d)^k - \frac{g}{d}}$$  
 
-$$y_t = y_0 + \sum_{k=0}^{t-1}{(v_0 + g/d)(1-d)^k} + \sum_{k=0}^{t-1}{- g/d}$$  
+$$y_t = y_0 + \sum_{k=0}^{t-1}{(v_0 + \frac{g}{d})(1-d)^k} + \sum_{k=0}^{t-1}{- \frac{g}{d}}$$  
 
-$$y_t = y_0 + (v_0 + g/d) \sum_{k=0}^{t-1}{(1-d)^k} - g/d \sum_{k=0}^{t-1}{1}$$  
+$$y_t = y_0 + (v_0 + \frac{g}{d}) \sum_{k=0}^{t-1}{(1-d)^k} - \frac{g}{d} \sum_{k=0}^{t-1}{1}$$  
 
-$$y_t = y_0 + (v_0 + g/d) \frac{1-(1-d)^t}{d} - \frac{g t}{d}$$  
+$$y_t = y_0 + (v_0 + \frac{g}{d}) \frac{1-(1-d)^t}{d} - \frac{g t}{d}$$  
 
 This is the final expression for the position of the object on the y axis
 
