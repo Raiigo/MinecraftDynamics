@@ -75,7 +75,7 @@ Let's chose $n=t$ to go back to $v_0$ :
 
 $$v_t = (1-d)^t v_0$$  
 
-That's the final expression for velocity on x (or z) axis.
+That's the final expression for velocity on the x (or z) axis.
 
 ## Acceleration and velocity on the y axis
 
@@ -100,3 +100,55 @@ $$v_t = (1-d) ((1-d) v_{t-2} - g) - g$$
 $$v_t = (1-d) ((1-d) (... ((1-d) v_0 - g) ...) - g) - g$$  
 
 $$v_t = (1-d)^t v_0 - g \frac{1-(1-d)^t}{d}$$  
+
+That's the final expression for the velocity on the y axis.
+
+## Position on the x axis
+
+From this relation $v_t = x_{t+1} - x_t$ we get :  
+
+$$x_{t+1} = x_t + v_t$$  
+
+$$x_t = x_{t-1} + v_{t-1}$$  
+
+With $v_t$ the velocity along the x axis :  
+
+$$x_t = x_{t-1} + v_{t-1}$$  
+
+$$x_t = x_{t-2} + v_{t-2} + v_{t-1}$$  
+
+$$x_t = x_0 + \sum_{k=0}^{t-1}{v_k}$$  
+
+$$x_t = x_0 + \sum_{k=0}^{t-1}{(1-d)^k v_0}$$  
+
+$$x_t = x_0 + v_0 \sum_{k=0}^{t-1}{(1-d)^k}$$  
+
+With the formula for the sum of geometric series we get : 
+
+$$x_t = x_0 + v_0 \frac{1-(1-d)^t}{d}$$  
+
+This is the final expression for the position of the object on the x axis
+
+## Position on the y axis
+
+We will apply the same relation as before, but replacing the horizontal velocity with the vertical one :  
+
+$$y_t = y_{t-1} + v_{t-1}$$  
+
+We obviously get the same summation :  
+
+$$y_t = y_0 + \sum_{k=0}^{t-1}{v_k}$$  
+
+$$y_t = y_0 + \sum_{k=0}^{t-1}{(1-d)^k v_0 - g \frac{1-(1-d)^k}{d}}$$  
+
+$$y_t = y_0 + \sum_{k=0}^{t-1}{(v_0 + g/d)(1-d)^k - g/d}$$  
+
+$$y_t = y_0 + \sum_{k=0}^{t-1}{(v_0 + g/d)(1-d)^k} + \sum_{k=0}^{t-1}{- g/d}$$  
+
+$$y_t = y_0 + (v_0 + g/d) \sum_{k=0}^{t-1}{(1-d)^k} - g/d \sum_{k=0}^{t-1}{1}$$  
+
+$$y_t = y_0 + (v_0 + g/d) \frac{1-(1-d)^t}{d} - \frac{g t}{d}$$  
+
+This is the final expression for the position of the object on the y axis
+
+
