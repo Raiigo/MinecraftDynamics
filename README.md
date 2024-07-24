@@ -155,4 +155,6 @@ This is the final expression for the position of the object on the y axis
 
 Let $h$ be the max height of our trajectory, let's find out what should be the vertical velocity ($v_0$) to reach such a height. After some calculations we get this solution :  
 
+$$\ln{(1-d)}$$  
+
 $$v_0 = \frac{g}{\ln{(1-d)}} W_{-1} \left( \frac{\ln{(1-d)}}{d} e^{\ln{(1-d)} \left( \frac{d h}{g} + \frac{1}{d}} \right) \right) - \frac{g}{d}$$
