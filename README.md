@@ -157,4 +157,4 @@ Let $h$ be the max height of our trajectory, let's find out what should be the v
 
 $$\ln{(1-d)}$$  
 
-$$v_0 = \frac{g}{\ln{(1-d)}} W_{-1} \left( \frac{\ln{(1-d)}}{d} e^{\ln{(1-d)} \left( \frac{d h}{g} + \frac{1}{d}} \right) \right) - \frac{g}{d}$$
+$$v_0 = \frac{g}{\ln{(1-d)}} W_{-1} \left( \frac{\ln{(1-d)}}{d} e^{\ln{(1-d)} \left( \frac{d h}{g} + \frac{1}{d} \right)} \right) - \frac{g}{d}$$
