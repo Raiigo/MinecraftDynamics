@@ -149,6 +149,10 @@ $$y_t = y_0 + (v_0 + \frac{g}{d}) \sum_{k=0}^{t-1}{(1-d)^k} - \frac{g}{d} \sum_{
 
 $$y_t = y_0 + (v_0 + \frac{g}{d}) \frac{1-(1-d)^t}{d} - \frac{g t}{d}$$  
 
-This is the final expression for the position of the object on the y axis
+This is the final expression for the position of the object on the y axis  
 
+## Determination of $v_0$ to reach a max height $h$
 
+Let $h$ be the max height of our trajectory, let's find out what should be the vertical velocity ($v_0$) to reach such a height. After some calculations we get this solution :  
+
+$$v_0 = \frac{g}{\ln(1-d)} W_{-1} \left( \frac{\ln(1-d)}{d} e^{\ln(1-d) \left( \frac{d h}{g} + \frac{1}{d}} \right) \right) - \frac{g}{d}$$
